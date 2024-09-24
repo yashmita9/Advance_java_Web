@@ -14,9 +14,7 @@
 	%>
 
 	<h3>
-		Hi..<%
-		user.getFirstName();
-	%>
+		Hi..<%=user.getFirstName()%>
 	</h3>
 	<%
 		} else {
