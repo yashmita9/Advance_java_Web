@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServletResponse;
 import In.com.Bean.Userbean;
 import In.com.Model.UserModel;
 
-@WebServlet("/UserRegistrationCti")
-public class UserRegistrationCti extends HttpServlet{
+@WebServlet("/UserCti")
+public class UserCti extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.sendRedirect("UserRegistrationView.jsp");
+		resp.sendRedirect("UserView.jsp");
 	}
 
 	@Override
@@ -44,8 +44,8 @@ public class UserRegistrationCti extends HttpServlet{
 		UserModel model = new UserModel();
 		try {
 			model.add(bean);
-			req.setAttribute("mesg", "User registered sucessfully");
-			RequestDispatcher rd = req.getRequestDispatcher("UserRegistrationView.jsp");
+			req.setAttribute("mesg", "User Added Sucessfully");
+			RequestDispatcher rd = req.getRequestDispatcher("UserView.jsp");
 			rd.forward(req, resp);
 		} catch (Exception e) {
 			

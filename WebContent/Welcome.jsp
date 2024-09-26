@@ -8,8 +8,11 @@
 </head>
 <body>
 <%@ include file="Header.jsp" %>
+<hr/>
 	<div align="center">
-	
+	<br>
+	<br>
+	<br>
 		<h1>Welcome to Dynamic Web Project</h1>
 		
 	</div>
