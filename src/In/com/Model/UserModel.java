@@ -29,7 +29,7 @@ public class UserModel {
 		return pk +1;
 	}
 	
-	public static void add(Userbean bean) throws Exception {
+	public void add(Userbean bean) throws Exception {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");
@@ -76,7 +76,7 @@ public class UserModel {
 		return bean;
 	}
 	
-	public static void update(Userbean bean) throws Exception {
+	public void update(Userbean bean) throws Exception {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "root");

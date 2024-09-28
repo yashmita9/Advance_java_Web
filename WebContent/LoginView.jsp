@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="Header.jsp" %>
-<hr>
+	<%@ include file="Header.jsp"%>
+	<hr>
 	<form action="LoginViewCtl" method="Post">
 		<div align="center">
 			<%
 				String mesg = (String) request.getAttribute("mesg");
+				String uri = (String) request.getAttribute("uri");
 			%>
 			<h1>Login Page</h1>
 			<br>
@@ -32,19 +33,19 @@
 
 				<tr>
 					<th>Passward :</th>
-					<td><input type="text" name="passward"></td>
-					
+					<td><input type="password" name="passward"></td>
+
 				</tr>
 
 				<tr>
 					<th></th>
 					<td><input type="submit" value="signin" name="opreation">
-					<input type="submit" value="SignUp" name="opreation">
-					</td>
-					
+						<input type="submit" value="SignUp" name="opreation"></td>
+
 				</tr>
 			</table>
 		</div>
+		<input type="text" name="uri" value="<%=uri%>">
 	</form>
 
 </body>

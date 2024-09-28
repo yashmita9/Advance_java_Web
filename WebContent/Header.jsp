@@ -16,9 +16,9 @@
 	<h3>
 		Hi..<%=user.getFirstName()%>
 	</h3>
-	<a href="UserCti"><b>Add user</b></a>
+	<a href="UserCtl.do"><b>Add user</b></a>
 	<b>|</b>
-	<a href="UserListCtl"><b>User List</b></a>
+	<a href="UserListCtl.do"><b>User List</b></a>
 	<b>|</b>
 	<a href="LoginViewCtl?opreation=logout"><b>Logout</b></a>
 	

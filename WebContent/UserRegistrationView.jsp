@@ -35,7 +35,7 @@
 				</tr>
 				<tr>
 					<th>Passward :</th>
-					<td><input type="text" name="passward"></td>
+					<td><input type="password" name="passward"></td>
 				</tr>
 				<tr>
 					<th>Dob :</th>

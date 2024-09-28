@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import In.com.Bean.Userbean;
 import In.com.Model.UserModel;
 
-@WebServlet("/UserListCtl")
+@WebServlet("/UserListCtl.do")
 public class UserListCtl extends HttpServlet {
 
 	@Override
@@ -58,6 +58,21 @@ public class UserListCtl extends HttpServlet {
 			pageNo = Integer.parseInt(req.getParameter("pageNo"));
 			pageNo--;
 		}
+		if (op.equals("Add")) {
+			resp.sendRedirect("UserCtl");
+		}
+		if (op.equals("Delete")) {
+			String[] ids = req.getParameterValues("ids");
+			if (ids != null && ids.length > 0) {
+				for (String id : ids) {
+					try {
+						model.delete(Integer.parseInt(id));
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
 		try {
 			List list = model.search(bean, pageNo, pageSize);
 			req.setAttribute("list", list);
@@ -68,7 +83,7 @@ public class UserListCtl extends HttpServlet {
 
 			e.printStackTrace();
 		}
-		resp.sendRedirect("UserListView.jsp");
+
 	}
 
 }
