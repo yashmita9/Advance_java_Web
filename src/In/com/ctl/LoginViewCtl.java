@@ -46,13 +46,12 @@ public class LoginViewCtl extends HttpServlet{
 				if (bean != null) {
 					session.setAttribute("user", bean);
 					if(uri.equalsIgnoreCase("null")) {
-						System.out.println("abc");
+						
 						resp.sendRedirect("WelcomeCtl");
 					}else {
 						resp.sendRedirect(uri);
 					}
-//					RequestDispatcher rd = req.getRequestDispatcher("Welcome.jsp");
-//					rd.forward(req, resp);
+				
 				} else {
 					req.setAttribute("mesg", "login id & password invalid");
 					RequestDispatcher rd = req.getRequestDispatcher("LoginView.jsp");
@@ -60,6 +59,7 @@ public class LoginViewCtl extends HttpServlet{
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
+				
 			}
 		}
 		

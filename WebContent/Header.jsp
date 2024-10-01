@@ -21,6 +21,10 @@
 	<a href="UserListCtl.do"><b>User List</b></a>
 	<b>|</b>
 	<a href="LoginViewCtl?opreation=logout"><b>Logout</b></a>
+	<b>|</b>
+	<a href="AddMarksCtl"><b>Add Marksheet</b></a>
+	<b>|</b>
+	<a href=""><b>Marksheet List</b></a>
 	
 	<%
 		} else {
